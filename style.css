@@ -433,7 +433,7 @@ footer {
         right: -280px;
         width: 280px;
         height: 100vh;
-        background: #fff;
+        background: #070606c9;
         padding: 30px;
         z-index: 2000;
         transition: right 0.3s ease;
