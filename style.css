@@ -239,6 +239,16 @@ section h2{
     color: white;
 }
 
+.contact-details i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.contact-details strong {
+    display: flex;
+    align-items: center;
+}
+
 .contact-container {
     max-width: 1100px;
     margin: auto;
