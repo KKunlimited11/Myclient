@@ -11,17 +11,29 @@
 <body>
 
     <header>
-        <nav>
-            <h2>Pharez Events</h2>
+         <nav>
+    <h2>Pharez Events</h2>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+
+        <button class="close-btn" id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
     </header>
 
     <main>
@@ -261,6 +273,26 @@
     <footer>
         <p>© 2026 Pharez Events & Celebrations Arena</p>
     </footer>
+<script>
+    let menuBtn = document.getElementById("menuBtn");
+    let closeBtn = document.getElementById("closeBtn");
+    let sidebar = document.getElementById("sidebar");
 
+    menuBtn.addEventListener("click", function() {
+        sidebar.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", function() {
+        sidebar.classList.remove("active");
+    });
+
+    let links = sidebar.querySelectorAll("a");
+
+    links.forEach(function(link) {
+        link.addEventListener("click", function() {
+            sidebar.classList.remove("active");
+        });
+    });
+</script>
 </body>
 </html>
