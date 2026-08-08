@@ -393,23 +393,80 @@ footer {
 
 @media (max-width: 700px) {
 
-    nav {
-        flex-direction: column;
-        gap: 20px;
+    /* Header */
+
+    header {
+        padding: 15px 6%;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
     }
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background: #111;
+        padding: 30px;
+        z-index: 2000;
+        transition: right 0.3s ease;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .close-btn {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 50px;
+        list-style: none;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+
+    /* Hero */
 
     #home h1 {
         font-size: 35px;
     }
 
+    #home p {
+        font-size: 18px;
+    }
 
-    @media (max-width: 700px) {
+
+    /* About */
+
     .about-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -435,40 +492,38 @@ footer {
     .about-features {
         grid-template-columns: 1fr;
     }
-}
 
-    #services div {
-        display: block;
-        width: 100%;
-        margin: 15px 0;
-    }
+
+    /* Services */
 
     .services-container {
-    grid-template-columns: 1fr;
-}
-
-.gallery-container {
-    grid-template-columns: 1fr;
-}
-
-.gallery-item {
-    height: 300px;
-}
+        grid-template-columns: 1fr;
+    }
 
 
+    /* Gallery */
 
-.contact-container {
-    grid-template-columns: 1fr;
-    gap: 35px;
-}
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
 
-.contact-info h2 {
-    font-size: 30px;
-}
-
-.contact-form {
-    padding: 25px;
-}
+    .gallery-item {
+        height: 300px;
+    }
 
 
+    /* Contact */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-info h2 {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
 }
