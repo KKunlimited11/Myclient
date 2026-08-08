@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharez Events & Celebrations Arena</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <header>
-         <nav>
+      <nav>
     <h2>Pharez Events</h2>
 
     <button class="menu-btn" id="menuBtn">
         <i class="fa-solid fa-bars"></i>
     </button>
-
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="sidebar" id="sidebar">
 
         <button class="close-btn" id="closeBtn">
@@ -193,7 +193,7 @@
                 Celebrations Arena and let's talk about your plans.
             </p>
 
-           <div class="contact-details">
+            <div class="contact-details">
 
     <div>
         <strong>
@@ -222,6 +222,7 @@
 </div>
 
             </div>
+
 
             <a
                 href="https://wa.me/2348023229563"
@@ -273,17 +274,27 @@
     <footer>
         <p>© 2026 Pharez Events & Celebrations Arena</p>
     </footer>
+
+</body>
 <script>
     let menuBtn = document.getElementById("menuBtn");
     let closeBtn = document.getElementById("closeBtn");
     let sidebar = document.getElementById("sidebar");
+    let sidebarOverlay = document.getElementById("sidebarOverlay");
 
     menuBtn.addEventListener("click", function() {
         sidebar.classList.add("active");
+        sidebarOverlay.classList.add("active");
     });
 
     closeBtn.addEventListener("click", function() {
         sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+    });
+
+    sidebarOverlay.addEventListener("click", function() {
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
     });
 
     let links = sidebar.querySelectorAll("a");
@@ -291,8 +302,8 @@
     links.forEach(function(link) {
         link.addEventListener("click", function() {
             sidebar.classList.remove("active");
+            sidebarOverlay.classList.remove("active");
         });
     });
 </script>
-</body>
 </html>
