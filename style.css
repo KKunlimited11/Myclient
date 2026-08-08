@@ -21,6 +21,11 @@ header {
     z-index: 1000;
 }
 
+.menu-btn,
+.close-btn {
+    display: none;
+}
+
 #home a,
 .about-btn,
 .whatsapp-btn,
